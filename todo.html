@@ -1,0 +1,33 @@
+<!--160725-1500-Todd-ToDo_todo_html-->
+<div id="main1">
+
+    <form ng-show="editing" ng-submit="editing = false">
+        <h3><span ng-bind="redo.listname"></span></h3>
+        <input  id="targetTitleInput" type="text" ng-model="$ctrl.list.name" ng-init="$ctrl.list.name" />
+        <button class="saveitembtn" type="submit"><span class="glyphicon glyphicon-ok"></span></button>
+    </form>
+    <h1 ng-hide="editing" trigger-focus-on="targetTitleInput" ng-click="editing = true">
+        <a ng-mouseover="style={color:'blue'}" ng-mouseleave="style={color:'black'}" ng-style="style">{{$ctrl.list.name}}</a>   </h1>
+
+    <ul>
+        <li ng-repeat="todo in $ctrl.list.todo">
+            <input type="checkbox" ng-model="todo.done" />
+            <span class='listitem' ng-class="{'done':todo.done}" ng-hide="editing" ng-click="editing = true">
+              <a trigger-focus-on="targetItemInput" ng-mouseover="style={color:'blue'}" ng-mouseleave="style={color:'black'}" ng-style="style">{{todo.title}}</a></span>
+                <form id="edititem" ng-show="editing" ng-submit="editing = false">
+                    <input id="targetItemInput" type="text" ng-model="todo.title" ng-init="$todo.title" />
+                    <button class="saveitembtn" type="submit"><span class="glyphicon glyphicon-ok"></span></button>
+                </form>
+        </li>
+    </ul>
+
+    <form name="frm" ng-submit="$ctrl.addTodo($ctrl.list)">
+        <label>
+            <input id="NuTaskItem" type="text" name="newTodo" ng-model="$ctrl.newTodo" placeholder="Enter New Task Item">
+        </label>
+        <button  trigger-focus-on="NuTaskItem" class="saveitembtn" ng-disabled="frm.$invalid" ><span class="glyphicon glyphicon-ok"></span></button>
+        <br>
+    </form>
+    <button  id="itemdelbtn" ng-click="$ctrl.clearCompleted($ctrl.item)"><span class="glyphicon glyphicon-remove"></span></button>
+
+</div>

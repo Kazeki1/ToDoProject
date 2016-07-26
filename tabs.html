@@ -1,0 +1,15 @@
+<!--160725-1500-Todd-ToDo_tabs_html-->
+<a id="about" ui-sref="about">About</a>
+<div id="inputbox">
+    Create Task<br>
+    <input ng-model="$ctrl.nuList" placeholder="Enter New Task"/><button class="saveitembtn" ng-click="$ctrl.addList()">GO</button>
+</div>
+
+<span id="tabs" ng-repeat="tab in $ctrl.tabs" >
+    <button id="blubtn" ng-click="$ctrl.selectList(tab)">{{tab.name}}</button>
+    <button id="redbtn" ng-click="$ctrl.removeTab(tab)" ng-if="$index > 0" class="glyphicon glyphicon-remove">
+    </button>
+</span>
+<div>
+    <to-do1 list='$ctrl.selectedList'></to-do1>
+</div>

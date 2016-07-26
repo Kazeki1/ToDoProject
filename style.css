@@ -1,0 +1,16 @@
+/*160725-1500-Todd-ToDo_style_css*/
+#main1{position:absolute;top:10%;padding:5px;left:25%;width:400px;border:solid 1px purple}
+.done{text-decoration: line-through;color:red;}
+#about{position:absolute;top:2%;left:20%}
+#inputbox{position:absolute;left:10%;height:90px;width:190px;top:10%;border:solid 1px green; padding:10px}
+#tabs{position:relative;top:5%;left:25%;width:150px;height:35px;border:solid 1px black;padding:5px;background-color:ghostwhite;padding-right:5px}
+/*#remButn{position:relative;top:1%;left:0;width:auto;background-color:orange;color:red; display:inline-block}*/
+#tabbox{position:absolute;top:15%;height:150px;width:auto;left:40%;border:dashed 1px red;display: inline}
+div[ng-app] { margin: 50px; }
+#edititem{position:relative;top:-25px;left:21px;}
+#itemdelbtn{position:relative;top:-31px;left:228px;cursor: pointer;background-color:red;color:orange}
+.saveitembtn{cursor: pointer;background-color:green;color:ghostwhite}
+.tooltip {border: 1px solid black;width:230px;margin-left:58px;margin-top:-35px;background-color:darkcyan;border-radius:4px;height:20px;color:white;}
+
+#blubtn{background-color:blue;color:ghostwhite}
+#redbtn {cursor: pointer;background-color:red;color:orange}
